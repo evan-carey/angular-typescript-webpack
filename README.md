@@ -1,6 +1,9 @@
 # angular-typescript-webpack
-Angular 1.5 starter using TypeScript, Webpack, and UI Router
+Angular 1.5 component-based starter using TypeScript, Webpack, and UI Router. Built following [Todd Motto's Angular 1.x Style Guide](https://github.com/toddmotto/angular-styleguide).
 
+### TODO
+- Add sample component and service.
+- Add comments and guidelines explaining style and structure.
 
 ### Install
 ```sh
