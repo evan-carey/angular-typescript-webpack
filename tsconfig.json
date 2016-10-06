@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "es5",
+		"noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+		"moduleResolution": "node",
+		"noEmitHelpers": true
+	},
+	"compileOnSave": false,
+	"include": [
+		"src/app/**/*"
+	],
+	"exclude": [
+		"node_modules",
+		"dist"
+	]
+}
