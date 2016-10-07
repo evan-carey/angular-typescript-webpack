@@ -1,22 +1,22 @@
 import * as angular from 'angular';
 import { StateProvider } from 'angular-ui-router';
-import { TodoComponent } from './todo.component';
+import { HomeComponent } from './home.component';
 
 function routeConfig($stateProvider: StateProvider) {
     "ngInject";
 
     $stateProvider
-        .state('todo', {
+        .state('home', {
             url: '/',
-            component: 'todo'
+            component: 'home'
         });
 }
 
-const Todo: ng.IModule = angular
-    .module('components.todo', [
+const Home: ng.IModule = angular
+    .module('components.home', [
 
     ])
-    .component('todo', new TodoComponent)
+    .component('home', new HomeComponent)
     .config(routeConfig);
 
-export default Todo.name;
+export default Home.name;

@@ -1,17 +1,17 @@
 import { StateService } from 'angular-ui-router';
-import './todo.scss';
+import './home.scss';
 
-export class TodoComponent implements ng.IComponentOptions {
+export class HomeComponent implements ng.IComponentOptions {
     controller: ng.IControllerConstructor;
-    templateUrl: string;
+    template: string;
 
     constructor() {
-        this.controller = TodoController;
-        this.templateUrl = 'src/components/todo/todo.html';
+        this.controller = HomeController;
+        this.template = require('./home.html');
     }
 }
 
-class TodoController implements ng.IComponentController {
+class HomeController implements ng.IComponentController {
 
     constructor(
         private $state: StateService,
