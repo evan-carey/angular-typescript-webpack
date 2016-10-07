@@ -34,7 +34,6 @@ module.exports = (function makeWebpackConfig() {
         extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
     };
     config.module = {
-        preloaders: [],
         loaders: [
             {
                 // TS LOADER
