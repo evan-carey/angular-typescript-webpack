@@ -32,6 +32,7 @@
     "rimraf": "^2.5.4",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
+    "typescript": "^2.0.3",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.1",
     "webpack-stream": "^3.2.0"
@@ -48,7 +49,6 @@
     "angular-messages": "^1.5.8",
     "angular-resource": "^1.5.8",
     "angular-sanitize": "^1.5.8",
-    "angular-ui-router": "^1.0.0-beta.3",
-    "typescript": "^2.0.3"
+    "angular-ui-router": "^1.0.0-beta.3"
   }
 }

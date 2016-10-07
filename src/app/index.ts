@@ -3,6 +3,8 @@ import { AppComponent } from './app.component';
 import Common from './common';
 import Components from './components';
 
+import './app.scss';
+
 const App: ng.IModule = angular
     .module('app', [
         'ui.router',

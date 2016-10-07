@@ -17,8 +17,7 @@ module.exports = (function makeWebpackConfig() {
 
     config.entry = {
         'app': './src/app/index.ts',
-        'vendor': './src/app/vendor.ts',
-        'env': isProd ? './env/env.prod.js' : './env/env.dev.js'
+        'vendor': './src/app/vendor.ts'
     };
 
     config.output = {
