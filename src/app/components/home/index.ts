@@ -1,15 +1,24 @@
 import * as angular from 'angular';
-import { StateProvider } from 'angular-ui-router';
+import { State, StateProvider, Ng1StateDeclaration } from 'angular-ui-router';
 import { HomeComponent } from './home.component';
+import { NavService } from './../../common/nav/nav.service';
 
-function routeConfig($stateProvider: StateProvider) {
+    const state: Ng1StateDeclaration = {
+        name: 'Home',
+        url: '/',
+        component: 'home'
+    }
+function routeConfig($stateProvider: StateProvider,) {
     "ngInject";
 
+
     $stateProvider
-        .state('home', {
-            url: '/',
-            component: 'home'
-        });
+        .state(state);
+
+}
+function runConfig(NavService: NavService) {
+        NavService.addNavItem(state);
+
 }
 
 const Home: ng.IModule = angular
@@ -17,6 +26,7 @@ const Home: ng.IModule = angular
 
     ])
     .component('home', new HomeComponent)
-    .config(routeConfig);
+    .config(routeConfig)
+    .run(runConfig);
 
 export default Home.name;
