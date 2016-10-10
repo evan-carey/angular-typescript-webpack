@@ -8,7 +8,7 @@ Angular 1.5 component-based starter using TypeScript, Webpack, and UI Router. Bu
 ### Install
 ```sh
 npm i typescript webpack -g
-git clone git@bitbucket.org:greek_rush/mantis-web.git
+git clone https://github.com/evan-carey/angular-typescript-webpack.git
 cd angular-typescript-webpack
 npm install
 npm start
