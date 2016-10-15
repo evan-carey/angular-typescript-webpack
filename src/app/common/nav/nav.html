@@ -1,3 +1,7 @@
-<md-nav-bar md-selected-nav-item="$ctrl.currentPage.name">
-    <md-nav-item ng-repeat="page in $ctrl.pages" name="{{page.name}}">{{page.name}}</md-nav-item>
+<md-nav-bar md-selected-nav-item="$ctrl.currentPage" nav-bar-aria-label="navigation links">
+    <md-nav-item md-nav-sref="app.home" name="home">Home</md-nav-item>
 </md-nav-bar>
+
+<!--<md-toolbar layout="row" class="md-toolbar-tools">
+	<h1>{{ $ctrl.user.username }}</h1>
+</md-toolbar>-->

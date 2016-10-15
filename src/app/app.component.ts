@@ -6,11 +6,11 @@
  * @implements {ng.IComponentOptions}
  */
 export class AppComponent implements ng.IComponentOptions {
-    templateUrl: string;
+    template: string;
     controller: ng.IControllerConstructor;
 
     constructor() {
-        this.templateUrl = "app/app.html";
+        this.template = require("./app.html");
         this.controller = AppController;
     }
 };

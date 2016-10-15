@@ -1,13 +1,8 @@
 import * as angular from 'angular';
-import { State, StateProvider, Ng1StateDeclaration } from 'angular-ui-router';
+import { State, StateProvider } from 'angular-ui-router';
 import { AboutComponent } from './about.component';
-import { NavService, NavServiceProvider } from './../../common/nav/nav.service';
+import { NavService, NavItem } from './../../common/nav/nav.service';
 
-const state: Ng1StateDeclaration = {
-    name: 'About',
-    url: '/about',
-    component: 'about'
-}
 
 function routeConfig($stateProvider: StateProvider) {
     "ngInject";
@@ -15,11 +10,20 @@ function routeConfig($stateProvider: StateProvider) {
 
 
     $stateProvider
-        .state(state);
+        .state('app.about', {
+            url: '/about',
+            component: 'about'
+        });
 
 }
 function runConfig(NavService: NavService) {
-    NavService.addNavItem(state);
+    const page: NavItem = {
+        state: 'app.about',
+        url: '/about',
+        label: 'Name'
+    };
+
+    NavService.addNavItem(page);
 }
 
 const About: ng.IModule = angular

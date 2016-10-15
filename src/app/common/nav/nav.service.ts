@@ -2,20 +2,20 @@ import { State, Ng1StateDeclaration } from 'angular-ui-router';
 
 export class NavService {
 
-    pages: Array<Ng1StateDeclaration>;
+    pages: Array<NavItem>;
 
     constructor() {
-        this.pages = new Array<Ng1StateDeclaration>();
+        this.pages = new Array<NavItem>();
     }
 
-    addNavItem(page: Ng1StateDeclaration) {
+    addNavItem(page: NavItem) {
         this.pages.push(page);
     }
 }
 
-export class NavServiceProvider implements ng.IServiceProvider {
-    $get() {
-        return new NavService();
 
-    }
+export interface NavItem {
+    state: string;
+    url: string;
+    label: string;
 }

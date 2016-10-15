@@ -23,7 +23,6 @@ module.exports = (function makeWebpackConfig() {
     config.output = {
         path: getPath('./dist'),
         filename: isProd ? '[name].[hash].js' : '[name].bundle.js',
-        // sourceMapFilename: isProd? '[name].[hash].bundle.js.map' : '[name].bundle.js.map',
         chunkFilename: isProd ? '[name].[hash].js' : '[name].bundle.js',
         publicPath: isProd ? '/' : 'http://localhost:8080/'
 
@@ -64,7 +63,6 @@ module.exports = (function makeWebpackConfig() {
             {
                 // HTML LOADER
                 test: /\.html$/,
-                // loader: 'ngtemplate!html',
                 loader: 'raw',
                 exclude: /(index)/
             }
