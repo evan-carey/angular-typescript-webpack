@@ -1,18 +1,36 @@
 import * as angular from 'angular';
-import { StateProvider } from 'angular-ui-router';
+import { State, StateProvider } from 'angular-ui-router';
 import { AboutComponent } from './about.component';
+import { NavService, NavItem } from './../../common/nav/nav.service';
 
-const About: ng.IModule = angular
-.module('about', [])
-.component('about', new AboutComponent)
-.config(($stateProvider: StateProvider) => {
+
+function routeConfig($stateProvider: StateProvider) {
     "ngInject";
 
+
+
     $stateProvider
-    .state('app.about', {
+        .state('app.about', {
+            url: '/about',
+            component: 'about'
+        });
+
+}
+function runConfig(NavService: NavService) {
+    const page: NavItem = {
+        state: 'app.about',
         url: '/about',
-        component: 'about'
-    });
-});
+        label: 'About'
+    };
+
+    NavService.addNavItem(page);
+}
+
+const About: ng.IModule = angular
+    .module('components.about', [])
+    .component('about', new AboutComponent)
+    .config(routeConfig)
+    .run(runConfig);
+
 
 export default About.name;

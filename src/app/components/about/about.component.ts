@@ -1,4 +1,3 @@
-import { StateService } from 'angular-ui-router';
 
 export class AboutComponent implements ng.IComponentOptions {
     controller: ng.IControllerConstructor;
@@ -11,5 +10,11 @@ export class AboutComponent implements ng.IComponentOptions {
 }
 
 class AboutController implements ng.IComponentController {
+
+    constructor() {
+        "ngInject";
+    }
+
+    $onInit() {}
 
 }
