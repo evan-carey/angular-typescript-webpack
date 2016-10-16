@@ -1,4 +1,3 @@
-import { StateService } from 'angular-ui-router';
 import './home.scss';
 
 export class HomeComponent implements ng.IComponentOptions {
@@ -13,10 +12,7 @@ export class HomeComponent implements ng.IComponentOptions {
 
 class HomeController implements ng.IComponentController {
 
-    constructor(
-        private $state: StateService,
-        private $mdDialog: ng.material.IDialogService
-    ) {
+    constructor() {
         "ngInject";
     }
 

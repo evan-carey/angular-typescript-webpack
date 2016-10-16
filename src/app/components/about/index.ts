@@ -20,7 +20,7 @@ function runConfig(NavService: NavService) {
     const page: NavItem = {
         state: 'app.about',
         url: '/about',
-        label: 'Name'
+        label: 'About'
     };
 
     NavService.addNavItem(page);

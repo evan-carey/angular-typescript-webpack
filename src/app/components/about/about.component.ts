@@ -11,7 +11,9 @@ export class AboutComponent implements ng.IComponentOptions {
 
 class AboutController implements ng.IComponentController {
 
-    constructor() {}
+    constructor() {
+        "ngInject";
+    }
 
     $onInit() {}
 

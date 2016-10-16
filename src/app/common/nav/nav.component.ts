@@ -4,9 +4,6 @@ import { NavService, NavItem } from './nav.service';
 export class NavComponent implements ng.IComponentOptions {
     controller: ng.IControllerConstructor;
     template: string;
-    bindings: {
-        [name: string]: string
-    };
 
     constructor() {
         this.controller = NavController;
@@ -24,6 +21,5 @@ class NavController implements ng.IComponentController {
 
     $onInit() {
         this.pages = this.NavService.pages;
-        this.currentPage = 'home';
     }
 }

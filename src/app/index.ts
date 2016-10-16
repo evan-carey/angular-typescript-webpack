@@ -30,8 +30,7 @@ function themeConfig($mdThemingProvider: ng.material.IThemingProvider) {
 
     $mdThemingProvider.theme('default')
         .primaryPalette('blue')
-        .accentPalette('green')
-        // .backgroundPalette('white');
+        .accentPalette('green');
 }
 
 const App: ng.IModule = angular
