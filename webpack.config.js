@@ -51,10 +51,17 @@ module.exports = (function makeWebpackConfig() {
                 ]
             },
             {
-                // SCSS / CSS LOADER
-                test: /\.s?css$/,
-                loader: 'style-loader!css-loader!sass-loader'
+                // SCSS LOADER - generates a separate CSS file, and adds the link to <head>
+                test: /\.scss$/,
+                loader: isProd ? ExtractTextPlugin.extract('style', 'css!postcss!sass') : 'style!css!sass'
             },
+            /**
+             * To keep CSS bundled in with the generated JS, uncomment this section
+             */
+            // {
+            //     test: /\.scss$/,
+            //     loader: 'style!css!sass'
+            // },
             {
                 // ASSET LOADER
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
@@ -90,6 +97,8 @@ module.exports = (function makeWebpackConfig() {
 
     if (isProd) {
         config.plugins.push(
+            // Create separate CSS file
+            new ExtractTextPlugin('app.css'),
 
             // Dedupe modules in the output
             new webpack.optimize.DedupePlugin(),
